@@ -17,6 +17,12 @@ function removeBackGroundColorById(elementId){
   element.classList.remove('bg-[#FFA500]');
 }
 
+function getTextById(elementId){
+  const element = document.getElementById(elementId)
+  const elementText = element.innerText;
+  return elementText;
+}
+
 function getElementTextById(elementId){
   const element = document.getElementById(elementId);
   const elementText = element.innerText;

@@ -9,7 +9,10 @@
 
 function handleKeyboardButtonPress(event){
   const playerPressed = event.key;
-  // console.log('player pressed', playerPressed);
+  console.log('player pressed', playerPressed);
+  if(playerPressed === 'Escape'){
+    gameOver();
+  }
 
   // get the expected key to press
   const currentAlphabetElement = document.getElementById('current-alphabet');
@@ -98,5 +101,13 @@ function play(){
 function gameOver(){
   hideElementById('play-ground');
   showElementById('final-result');
+  // update final score
+  const lastScore = getElementTextById('current-score');
+  setElementTextById('final-score', lastScore);
+  
+  // clear the current alphabet highlight color when a new game is started
+  const alphabet = getTextById('current-alphabet');
+  removeBackGroundColorById(alphabet);
+  
 }
 
