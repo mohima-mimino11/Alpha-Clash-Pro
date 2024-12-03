@@ -20,7 +20,7 @@ function handleKeyboardButtonPress(event){
   const expectedAlphabet = currentAlphabet.toLowerCase();
   // console.log(playerPressed, currentAlphabetElement);
   if(playerPressed === expectedAlphabet){
-    console.log('you got a point');
+   
     const currentScore = getElementTextById('current-score');
     const updatedScore = currentScore + 1;
     setElementTextById('current-score', updatedScore)
@@ -45,7 +45,7 @@ function handleKeyboardButtonPress(event){
     continueGame();
     
   }else{
-    console.log('you lost a life.');
+    
     const currentLife = getElementTextById('current-life');
     const updatedLife = currentLife - 1;
     setElementTextById('current-life', updatedLife);
