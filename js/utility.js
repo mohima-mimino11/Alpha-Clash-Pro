@@ -9,7 +9,24 @@ function showElementById(elementId){
 }
 function setBackGroundColorById(elementId){
   const element = document.getElementById(elementId);
-  element.classList.add('bg-[#FFA500]')
+  element.classList.add('bg-[#FFA500]');
+}
+
+function removeBackGroundColorById(elementId){
+  const element = document.getElementById(elementId);
+  element.classList.remove('bg-[#FFA500]');
+}
+
+function getElementTextById(elementId){
+  const element = document.getElementById(elementId);
+  const elementText = element.innerText;
+  const value = parseInt(elementText);
+  return value;
+}
+
+function setElementTextById(elementId, value){
+  const element = document.getElementById(elementId);
+  element.innerText = value;
 }
 
 function getRandomAlphabet(){

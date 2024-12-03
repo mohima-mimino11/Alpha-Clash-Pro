@@ -21,7 +21,7 @@
     <div class="flex flex-col items-center gap-10">
       <h1 class="text-8xl text-white font-anton">ALPHABET CLASH</h1>
       <p class="font-poppin  text-white">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-      <button class="btn bg-white text-black"  onclick="playNow()">Play Now</button>
+      <button class="btn bg-white text-black"  onclick="play()">Play Now</button>
     </div>
 
   </section>
@@ -76,15 +76,17 @@
        </div>
       <!-- life score -->
        <div class="flex justify-between w-3/4">
+        <!-- Life Button -->
         <button class="btn bg-[#360490] rounded-full text-white px-4">
           Life
           <img src="images/heart.svg" alt="">
-          <span>1</span>
+          <span id="current-life">5</span>
         </button>
+        <!-- score button -->
         <button class="btn bg-[#360490] rounded-full text-white px-4">
           Score
           <img src="images/dollar.svg" alt="">
-          <span>1</span>
+          <span id="current-score">0</span>
         </button>
        </div>
     </div>
@@ -92,13 +94,14 @@
   </section>
   <!-- playground end -->
    <!-- Score Screen start -->
-  <section class="result flex flex-col justify-center items-center min-h-screen hidden">
+  <section id="final-result" class="flex flex-col justify-center items-center min-h-screen hidden">
     <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-10 rounded-2xl ">
+      <h4 class="text-3xl">Game Over!</h4>
       <h1 class=" text-7xl">
         <span class="font-extrabold">Score:</span>
         <span>14</span>
       </h1>
-      <button class="btn">Play Again</button>
+      <button onclick="play()" class="btn">Play Again</button>
       <p>Practice will make you Pro</p>
     </div>
   </section>
